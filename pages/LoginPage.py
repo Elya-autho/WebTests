@@ -20,5 +20,6 @@ class LoginPageLocators:
 
 
 
+
 class LoginPageHelper(BasePage):
     pass
