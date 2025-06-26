@@ -16,10 +16,5 @@ class LoginPageLocators:
     QR_TAB = (By.XPATH,'//*[@data-l="t,qr_tab"]')
 
 
-
-
-
-
-
 class LoginPageHelper(BasePage):
     pass

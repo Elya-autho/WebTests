@@ -12,7 +12,3 @@ class BasePage:
     def get_url(self,url):
         return self.driver.get(url)
 
-    
-
-
-
