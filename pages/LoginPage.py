@@ -8,7 +8,7 @@ class LoginPageLocators:
     LOGIN_BUTTON = (By.XPATH, '//*[@data-l="t,sign_in"]')
     QR_BUTTON = (By.XPATH, '//*[@id="qrCode-3407364914"]/span')
     FORGOT_PASSWORD = (By.XPATH, '//*[@tsid="restore"]')
-    REGISTER_BUTTON = (By.XPATH,'//*[@data-l="t,register"]')
+    REGISTER_BUTTON = (By.XPATH,'//div[@class="external-oauth-login-footer"]/a[@data-l="t,register"] ')
 
     VK_IKON = (By.XPATH, '//*[@data-module="registration/vkconnect"]')
     MAIL_IKON =(By.XPATH, '//*[@data-provider="MAILRU"]')
