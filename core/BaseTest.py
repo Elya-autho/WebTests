@@ -1,8 +1,9 @@
 import pytest
 from selenium import webdriver
 
-@pytest.fixture(scope="session")
+
+@pytest.fixture(scope='session')
 def browser():
-    driwer = webdriver.Chrome()
-    yield driwer
-    driwer.quit()
+    driver = webdriver.Chrome()
+    yield driver
+    driver.quit()
