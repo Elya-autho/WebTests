@@ -23,3 +23,4 @@ def test_empty_password(browser):
     LoginPage = LoginPageHelper(browser)
     LoginPage.send_empty_password(LOGIN)
     assert LoginPage.get_error_text() == EMPTY_PASSWORD_ERROR
+
