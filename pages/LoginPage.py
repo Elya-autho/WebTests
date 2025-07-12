@@ -46,7 +46,9 @@ class LoginPageHelper(BasePage):
         self.attach_screenshot()
         return self.find_element(LoginPageLocators.ERROR_TEXT).text
 
+    @allure.step("Вводим логин")
     def send_empty_password(self, LOGIN):
+        self.attach_screenshot()
         login_field = self.find_element(LoginPageLocators.LOGIN_FIELD)
         login_field.send_keys(LOGIN)
         self.click_login()
