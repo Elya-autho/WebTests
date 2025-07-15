@@ -11,7 +11,7 @@ class LoginPageLocators:
     LOGIN_BUTTON = (By.XPATH, '//*[@data-l="t,sign_in"]')
     QR_BUTTON = (By.XPATH, '//*[@data-l="t,get_qr"]')
     FORGOT_PASSWORD = (By.XPATH, '//*[@tsid="restore"]')
-    REGISTER_BUTTON = (By.XPATH, '//div[@class="external-oauth-login-footer"]/a[@data-l="t,register"]')
+    REGISTRATION_BUTTON = (By.XPATH, '//div[@class="external-oauth-login-footer"]/a[@data-l="t,register"]')
     VK_IKON = (By.XPATH, '//*[@data-module="registration/vkconnect"]')
     MAIL_IKON = (By.XPATH, '//*[@data-provider="MAILRU"]')
     YANDEX_IKON = (By.XPATH, '//*[@data-l="t,yandex"]')
@@ -37,7 +37,7 @@ class LoginPageHelper(BasePage):
         self.find_element(LoginPageLocators.LOGIN_BUTTON)
         self.find_element(LoginPageLocators.QR_BUTTON)
         self.find_element(LoginPageLocators.FORGOT_PASSWORD)
-        self.find_element(LoginPageLocators.REGISTER_BUTTON)
+        self.find_element(LoginPageLocators.REGISTRATION_BUTTON)
         self.find_element(LoginPageLocators.VK_IKON)
         self.find_element(LoginPageLocators.MAIL_IKON)
         self.find_element(LoginPageLocators.YANDEX_IKON)
@@ -72,4 +72,10 @@ class LoginPageHelper(BasePage):
     def click_recovery(self):
         self.attach_screenshot()
         self.find_element(LoginPageLocators.PROFILE_RECOVERY_BUTTON).click()
+
+    @allure.step("Переходим к регистрации")
+    def click_registration(self):
+        self.attach_screenshot()
+        self.find_element(LoginPageLocators.REGISTRATION_BUTTON).click()
+
 
