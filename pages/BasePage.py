@@ -45,6 +45,7 @@ class BasePageHelper:
     def get_windows_id(self, index):
         return self.driver.window_handles[index]
 
+    @allure.step("Переходим к новой вкладке")
     def switch_window(self, window_id):
         self.driver.switch_to.window(window_id)
 

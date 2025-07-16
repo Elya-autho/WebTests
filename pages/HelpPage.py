@@ -21,7 +21,7 @@ class HelpPageLocators:
     ADVERTISEMENT_CABINET = (By.XPATH, "//a[contains(@href, 'reklamnyi-kabinet')]")
 
 
-class HelpPageHelperHelper(BasePageHelper):
+class HelpPageHelper(BasePageHelper):
     def check_page(self):
         with allure.step('Проверяем корректность загрузки страницы'):
             self.attach_screenshot()
@@ -40,7 +40,7 @@ class HelpPageHelperHelper(BasePageHelper):
         self.find_element(HelpPageLocators.IMPORTANT_INFORMATION)
         self.find_element(HelpPageLocators.ADVERTISEMENT_CABINET)
 
-    def scrollToitem(self, locator):
+    def scroll_to_item(self, locator):
         scroll_item = self.find_element(locator)
         ActionChains(self.driver).scroll_to_element(scroll_item).click(scroll_item).perform()
 
